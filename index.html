@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenMachines</title>
+    <style>
+        @keyframes colorChange {
+            0% { background-color: #ff9a9e; }
+            25% { background-color: #fad0c4; }
+            50% { background-color: #fad0c4; }
+            75% { background-color: #ffecd2; }
+            100% { background-color: #ff9a9e; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            animation: colorChange 20s infinite;
+        }
+        header {
+            background: url('header-image.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #343a40;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .main-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .main-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .main-header p {
+            font-size: 1.2em;
+            color: #6c757d;
+        }
+        .content-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .content-section .card {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin: 0 10px;
+            width: 30%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            max-width: 100%;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .card h3 {
+            padding: 10px;
+            font-size: 1.5em;
+        }
+        .card p {
+            padding: 0 10px 10px 10px;
+            color: #6c757d;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #adb5bd;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OpenMachines</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#progress">Progress</a>
+            <a href="#resources">Resources</a>
+            <a href="#blog">Blog</a>
+        </nav>
+    </header>
+    <section class="main-header">
+        <h1>Discovering and enacting the path to a robot in every home.</h1>
+        <p>Learn more</p>
+    </section>
+    <section class="content-section">
+        <div class="card">
+            <img src="https://www.bpmcdn.com/f/files/saanich/alex2.jpg;w=1200;h=800;mode=crop" alt="photo">
+            <h3>AiRParrot in the news</h3>
+            <p>Learn about our supporters</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn.the-scientist.com/assets/articleNo/71687/aImg/52292/62dc0501-8dda-4bd7-9ba9-fa1a9b8c7cb4-l.jpg" alt="AI">
+            <h3>ANT-1.5</h3>
+            <p>The AI Powering AiRParrot behind the voice</p>
+        </div>
+        <div class="card">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_ksIlG7EjP7o1sL6LVyRN2ej5SCus905PXLDbFXkEdeYUI6O7MpeOKM2I4ndG2tQ81aT_Q0uXv8u19o0AIkPsXzfr1VMyvXY_IROLS0YWHYOT9RjzP8EA-oyT86_elXCd1eebG2AQF6mM/s1600/1+-+Kite+-+Recycled+Artwork+-+Learning+and+Exploring+Through+Play.jpg" alt="artwork">
+            <h3>AiRParrot Skills</h3>
+            <p>Teaching AiRParrot new skills</p>
+        </div>
+    </section>
+    <footer>
+        <p>2024 OpenMachines</p>
+        <a href="#about">About</a>
+        <a href="#progress">Progress</a>
+        <a href="#resources">Resources</a>
+        <a href="#blog">Blog</a>
+        <a href="#charter">Charter</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#press">Press</a>
+    </footer>
+</body>
+</html>
