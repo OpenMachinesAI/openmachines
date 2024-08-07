@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenMachines - Press</title>
+    <style>
+        @keyframes colorChange {
+            0% { background-color: #ff9a9e; }
+            25% { background-color: #fad0c4; }
+            50% { background-color: #fad0c4; }
+            75% { background-color: #ffecd2; }
+            100% { background-color: #ff9a9e; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            animation: colorChange 20s infinite;
+        }
+        header {
+            background: url('header-image.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #343a40;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff9a9e;
+        }
+        .main-header {
+            text-align: center;
+            margin: 60px 0;
+            animation: fadeIn 2s;
+        }
+        .main-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .main-header p {
+            font-size: 1.2em;
+            color: #6c757d;
+        }
+        .content-section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 2s;
+        }
+        .content-section.visible {
+            opacity: 1;
+        }
+        .content-section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .content-section p {
+            font-size: 1.2em;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        .team-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .team-section ul li {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+            transition: background 0.3s;
+        }
+        .team-section ul li:hover {
+            background: #ffecd2;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #adb5bd;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ff9a9e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OpenMachines</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="progress.html">Progress</a>
+            <a href="resources.html">Resources</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+    <section class="main-header">
+        <h1>Contact OpenMachines</h1>
+        <p>Contact Alex at: alex.openmachines@gmail.com</p>
+    
+        </ul>
+    </section>
+    <footer>
+        <p>Join OpenMachines</p>
+        <a href="about.html">About</a>
+        <a href="progress.html">Progress</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog.html">Blog</a>
+        <a href="charter.html">Charter</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="press.html">Press</a>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.content-section');
+
+        const options = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
